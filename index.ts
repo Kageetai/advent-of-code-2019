@@ -1,18 +1,5 @@
-import input from './inputs/1.json';
+import day1 from './days/1';
 
-const calcFuelByMass = (mass: number) => Math.floor(mass / 3) - 2;
-const add = (n: number, m: number) => n + m;
-const getTotalFuel = (fuel: number) => {
-  let newFuel = fuel;
-  while (newFuel > 0) {
-    newFuel = calcFuelByMass(newFuel);
-    if (newFuel > 0) {
-      fuel += newFuel;
-    }
-  }
-  return fuel;
-}
+const days = [day1];
 
-let fuel = input.map(calcFuelByMass).map(getTotalFuel).reduce(add, 0);
-
-console.log('total', fuel);
+days.map(console.log);
