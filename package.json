@@ -7,7 +7,10 @@
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/lodash": "4.14.149",
+    "lodash": "4.17.15"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.6.1"
   },

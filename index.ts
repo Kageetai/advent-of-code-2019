@@ -1,5 +1,5 @@
-import day1 from './days/1';
+import days from './days';
 
-const days = [day1];
-
-days.map(console.log);
+days.forEach((n, i) => [
+  console.log('day ' + (i + 1), n)
+])
