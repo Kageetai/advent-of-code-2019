@@ -2,6 +2,8 @@ import { chunk } from 'lodash';
 
 import input from '../inputs/2.json';
 
+const target = 19690720;
+
 const executeProgram = (program: number[], noun: number, verb: number) => {
   program[1] = noun;
   program[2] = verb;
@@ -27,6 +29,15 @@ const executeProgram = (program: number[], noun: number, verb: number) => {
   return program;
 };
 
-const result = executeProgram([...input], 12, 2);
+const findTupel = () => {
+  for (let noun = 0; noun < 100; noun++) {
+    for (let verb = 0; verb < 100; verb++) {
+      const output = executeProgram([...input], noun, verb)[0];
+      if (output === target) {
+        return 100 * noun + verb;
+      }
+    }
+  }
+};
 
-export default result[0];
+export default findTupel();
